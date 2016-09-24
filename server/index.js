@@ -77,8 +77,9 @@ server.del('/data/:userid/:postid', function(req, res, next) {
     });
 })
 
-server.get(/\/public\/?.*/, restify.serveStatic({
-    directory: __dirname
+server.get(/.*/, restify.serveStatic({
+    'directory': 'public',
+    'default': 'index.html'
 }));
 
 server.listen(8070, function() {
