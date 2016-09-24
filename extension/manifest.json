@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Save to Squirrel Box",
+  "description": "Store everything important you find on the internet and never lose them again.",
+  "version": "1.0",
+  "icons" : {
+    "16" : "icon.png",
+    "48" : "icon48.png",
+    "128" : "icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "http://*/",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["popup.js"]
+  }
+}

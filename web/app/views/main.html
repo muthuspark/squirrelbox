@@ -1,0 +1,24 @@
+<div class="header">
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="collapse navbar-collapse" id="js-navbar-collapse">
+                    <div class="text-center logo"><img src="images/squirell.png">
+                        <p>Squirrel Box</p>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" ng-model="searchText" class="form-control" placeholder="Search">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3" ng-repeat="rec in records | filter:searchText">
+            <h3><a href ng-click="removepost(rec.value.ts, $index)"><span class="glyphicon glyphicon-remove"></span></a><a href="{{rec.value.pg}}">{{rec.value.tt}}</a></h3>
+            <p>{{rec.value.tx}}</p>
+        </div>
+    </div>
+</div>
