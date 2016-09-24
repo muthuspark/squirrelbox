@@ -77,6 +77,10 @@ server.del('/data/:userid/:postid', function(req, res, next) {
     });
 })
 
+server.get(/\/public\/?.*/, restify.serveStatic({
+    directory: __dirname
+}));
+
 server.listen(8070, function() {
     console.log('%s listening at %s', server.name, server.url);
 });
